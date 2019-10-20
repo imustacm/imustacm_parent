@@ -11,6 +11,11 @@
         <module>../imustacm-common</module>
         <module>../imustacm-user-api</module>
         <module>../imustacm-user-service</module>
+        <module>../imustacm-problem-api</module>
+        <module>../imustacm-problem-service</module>
+        <module>../imustacm-eureka</module>
+        <module>../cn.imustacm.gateway</module>
+        <module>../imustacm-gateway</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
@@ -46,5 +51,17 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.M9</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
